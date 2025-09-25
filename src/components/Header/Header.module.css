@@ -1,0 +1,141 @@
+.header {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.headerToolbar {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 64px;
+    position: relative;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.logoImage {
+    height: 40px;
+    width: auto;
+}
+
+.menuButton {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.menuIcon {
+    display: block;
+    pointer-events: none;
+    fill: #2e315e;
+}
+
+.header__nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #2e315e;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #2e6be6;
+    text-decoration: underline;
+}
+
+.active {
+    color: #2e6be6;
+    font-weight: 700;
+}
+
+.donateWrapper {
+    /* desktop: inline with nav */
+}
+
+
+@media (max-width: 767px) {
+    .headerToolbar {
+        padding: 12px 12px;
+    }
+
+    .menuButton {
+        display: block;
+    }
+
+    /* Mobile nav menu styles */
+    .header__nav {
+        position: absolute;
+        top: 64px;
+        height: 93vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        flex-direction: column;
+        padding: 24px 16px 40px;
+        /* extra bottom for donate button */
+        box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
+        transform: translateY(-200%);
+        transition: transform 0.3s ease-in-out;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 1000;
+    }
+
+    .navOpen {
+        transform: translateY(0);
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    /* Nav links stacked */
+    .navLinks {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navLink {
+        padding: 12px 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    /* Donate button full width at bottom inside nav */
+    .donateWrapper {
+        margin-top: auto;
+        /* pushes to bottom */
+        width: 100%;
+    }
+
+    .donateWrapper button {
+        width: 100%;
+    }
+
+    .menuIcon {
+        height: 30px;
+        width: 30px;
+        fill: #2e315e;
+        pointer-events: none;
+    }
+}

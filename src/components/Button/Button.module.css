@@ -1,0 +1,61 @@
+.base {
+    border-radius: 99999px;
+    text-transform: none;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+.sm {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+    min-height: 36px;
+}
+
+.md {
+    padding: 10px 20px;
+    font-size: 1rem;
+    min-height: 44px;
+}
+
+.lg {
+    padding: 12px 24px;
+    font-size: 1.0625rem;
+    min-height: 48px;
+}
+
+/* Variants */
+.primary {
+    background-color: #2E315E;
+    color: white;
+    border: 2px solid #ffffff;
+}
+
+.primary:hover {
+    background-color: #40447E;
+    border: 2px solid #2E315E;
+}
+
+.primary:active {
+    background-color: #21244F;
+    border: 2px solid #2E315E;
+}
+
+.secondary {
+    background-color: white;
+    color: #2E315E;
+    border: 2px solid #21244F;
+}
+
+
+.secondary:hover {
+    background-color: #40447E;
+    border: 2px solid #21244F;
+    color: white;
+}
+
+.secondary:active {
+    background-color: #21244F;
+    border: 2px solid #21244F;
+}

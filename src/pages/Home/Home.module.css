@@ -1,0 +1,39 @@
+.content {
+  height: 450px;
+  background-color: #FBF6EE;
+  display: flex;
+  flex-direction: column; /* vertically stack paragraphs */
+  gap: 2rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: 'DM serif', serif;
+}
+
+.content p {
+  color: #D8A85A;
+  font-size: 5rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.content p span {
+  color: #F1E0C5;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .content {
+    height: auto;       /* allow height to grow */
+    padding: 1.5rem;   /* a bit less padding */
+    gap: 1.2rem;       /* tighter spacing */
+  }
+
+  .content p {
+    font-size: 1.5rem;   /* smaller font for mobile */
+  }
+  
+  .content p span {
+    /* keep same or slightly smaller */
+    font-size: 1.5rem; /* inherits from p if needed */
+  }
+}
