@@ -1,0 +1,151 @@
+.page {
+    min-height: 100vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top {
+    width: 100%;
+    text-align: left;
+}
+
+.mainHeading {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #2E315E;
+    margin-bottom: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    width: 100%;
+    max-width: 100vw;
+    margin-bottom: 3rem;
+}
+
+.card {
+    background: #F3F3F6;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(46, 49, 94, 0.09);
+    padding: 2rem 1.2rem 1.6rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 200px;
+    max-width: 400px;
+    transition: box-shadow 0.3s;
+}
+
+.iconBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(46, 49, 94, 0.09);
+    width: 62px;
+    height: 62px;
+    margin-bottom: 1rem;
+    border: 2px solid #2E315E;
+    color: #2E315E;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+    color: #2E315E !important;
+}
+
+.subHeading {
+    font-size: 1.16rem;
+    font-weight: 700;
+    color: #2E315E;
+    margin-bottom: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.content {
+    color: #484B5B;
+    font-size: 1.04rem;
+    margin-bottom: 0;
+    line-height: 1.42;
+    font-weight: 500;
+}
+
+.bottom {
+    width: 100%;
+    text-align: left;
+    font-size: 1.13rem;
+    margin-top: 2.2rem;
+    color: #484B5B;
+}
+
+.link {
+    color: #2E315E;
+    text-decoration: underline;
+    font-weight: 700;
+    margin-left: 0.18em;
+}
+
+/* Responsive Grid */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.7rem;
+    }
+
+    .card {
+        max-width: 90vw;
+        padding: 1.1rem 0.5rem;
+        min-height: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainHeading {
+        font-size: 2.05rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+    }
+
+    .card {
+        max-width: 98vw;
+        box-shadow: 0 2px 8px rgba(46, 49, 94, 0.09);
+        padding: 1rem 0.35rem;
+        min-height: 120px;
+    }
+
+    .iconBox {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 0.6rem;
+    }
+
+    .icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .subHeading {
+        font-size: 1rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .content,
+    .bottom {
+        font-size: 0.97rem;
+    }
+
+    .bottom {
+        margin-top: 1.1rem;
+    }
+}

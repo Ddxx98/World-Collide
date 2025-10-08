@@ -1,0 +1,129 @@
+.page {
+  background: #fff;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Text and button section */
+.centeredSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 520px;
+  margin: 40px 0 60px;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  color: #4D517F;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Buttons */
+.primaryButton,
+.secondaryButton {
+  background-color: #5568B2;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 14px 40px;
+  transition: background-color 0.25s;
+}
+
+.primaryButton:hover,
+.secondaryButton:hover {
+  background-color: #2E315E;
+}
+
+/* Info Section */
+.infoSection {
+  background-color: #E8FEF1;
+  max-width: 800px;
+  width: 100%;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  gap: 28px;
+  text-align: center;
+}
+
+.infoSection button:hover{
+    color: #4D517F;
+}
+
+.subHeading {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #4D517F;
+  margin: 0;
+}
+
+.infoParagraph {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #4D517F;
+  max-width: 480px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.infoImage {
+  width: 100%;
+  max-width: 300px;
+  user-select: none;
+}
+
+/* Animation keyframes for continuous scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .centeredSection {
+    max-width: 90vw;
+    margin: 30px 0 40px;
+  }
+
+  .infoSection {
+    max-width: 90vw;
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .infoImage {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .subHeading {
+    font-size: 1.5rem;
+  }
+
+  .infoParagraph {
+    font-size: 1rem;
+  }
+}

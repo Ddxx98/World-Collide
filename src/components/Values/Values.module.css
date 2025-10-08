@@ -1,0 +1,142 @@
+.page {
+  min-height: 100vh;
+  /* padding: 60px 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #2E315E; /* Updated to match your palette dark shade */
+}
+
+.circlesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  background-color: #D6F1E7; /* Softer greenish shade for background */
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.bottomRow {
+  margin-top: -40px; /* shifts bottom row upward slightly for overlap effect */
+}
+
+/* ---- Circle styling ---- */
+.circle {
+  background-color: #F0F4FF; /* Light blue shade to harmonize with palette */
+  border: 2px solid #5568B2; /* Deeper blue border for emphasis */
+  border-radius: 50%;
+  width: 300px; /* increased size */
+  height: 300px; /* increased size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: #2E315E; /* dark blue text */
+  font-size: 1.1rem; /* larger font */
+  line-height: 1.5;
+  box-shadow: 0 6px 14px rgba(46, 49, 94, 0.15); /* subtle navy shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(46, 49, 94, 0.25);
+}
+
+/* ---- Responsive Design ---- */
+@media (max-width: 1024px) {
+  .circle {
+    width: 260px;
+    height: 260px;
+    font-size: 1rem;
+    padding: 25px;
+  }
+
+  .bottomRow {
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .circlesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  /* First row: 2 elements */
+  .circle:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+  .circle:nth-child(2) {
+    grid-column: 3 / span 2;
+    grid-row: 1;
+    justify-self: start;
+  }
+
+  /* Second row: 1 element centered */
+  .circle:nth-child(3) {
+    grid-column: 2 / span 2;
+    grid-row: 2;
+    justify-self: center;
+  }
+
+  /* Third row: 2 elements */
+  .circle:nth-child(4) {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    justify-self: end;
+  }
+  .circle:nth-child(5) {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+    justify-self: start;
+  }
+
+  .circle {
+    width: 240px;
+    height: 240px;
+    padding: 25px;
+    font-size: 0.95rem;
+  }
+
+  .bottomRow {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .circlesContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .circle {
+    width: 200px;
+    height: 200px;
+    font-size: 0.9rem;
+  }
+}
