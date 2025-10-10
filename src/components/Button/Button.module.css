@@ -30,6 +30,10 @@
     background-color: #2E315E;
     color: white;
     border: 2px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 }
 
 .primary:hover {

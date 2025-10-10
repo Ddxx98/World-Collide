@@ -60,13 +60,14 @@
 }
 
 .navLink:hover {
-    color: #2e6be6;
+    color: #2e315e;
     text-decoration: underline;
 }
 
 .active {
-    color: #2e6be6;
+    color: #2e315e;
     font-weight: 700;
+    text-decoration: underline;
 }
 
 .donateWrapper {

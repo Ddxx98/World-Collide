@@ -1,0 +1,193 @@
+.section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 44px 18px 0 18px;
+}
+
+.heading {
+    color: #2e315e;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 28px;
+    line-height: 1.12;
+}
+
+.eventList {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.eventCard {
+    display: flex;
+    background: #fff;
+    border-radius: 13px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.035);
+    padding: 22px 20px;
+    gap: 28px;
+    align-items: flex-start;
+    border: 1.5px solid #EDF0F3;
+}
+
+.eventCardLeft {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eventImageBox {
+    height: 200px;
+    width: 200px;
+    background: #F6F8FA;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.eventImage {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.eventCardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.eventMeta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.eventMetaItem {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 1rem;
+    color: #4D517F;
+    font-weight: 600;
+}
+
+.online {
+    color: #4D517F;
+}
+
+.offline {
+    color: #4D517F;
+}
+
+.eventTitle {
+    color: #4D517F;
+    font-size: 1.03rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    letter-spacing: -0.08px;
+}
+
+.eventLinkSection{
+    display: flex;
+    flex-direction: column;
+    padding: 12px 14px;
+    gap: 6px;
+    border: 2px solid #EDF0F3;
+}
+
+.eventLinkBox {
+    font-size: 0.97rem;
+    color: #4D517F;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+.eventLinkLabel {
+    color: #4D517F;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.eventLink {
+    color: #4D517F;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.eventAddressLabel {
+    color: #4D517F;
+    font-size: 0.92rem;
+    font-weight: 400;
+    margin-top: 3px;
+    margin-bottom: 1px;
+}
+
+@media (max-width: 900px) {
+    .heading {
+        font-size: 2rem;
+        padding-left: 2px;
+    }
+
+    .section {
+        padding: 24px 7px 0 7px;
+    }
+
+    .eventCard {
+        padding: 18px 8px;
+        gap: 14px;
+    }
+
+    .eventMeta {
+        gap: 9px;
+    }
+
+    .eventCardLeft {
+        width: 66px;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 18px 2px 0 2px;
+    }
+
+    .heading {
+        font-size: 1.29rem;
+        margin-bottom: 14px;
+    }
+
+    .eventCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .eventCardLeft {
+        width: 98%;
+        margin-bottom: 10px;
+    }
+
+    .eventImageBox {
+        margin: 0 auto;
+    }
+
+    .eventMeta {
+        gap: 8px;
+        font-size: 0.98rem;
+    }
+
+    .eventTitle {
+        font-size: 0.97rem;
+    }
+
+    .eventLinkLabel {
+        font-size: 0.97rem;
+    }    
+}

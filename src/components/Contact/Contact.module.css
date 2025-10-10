@@ -1,0 +1,182 @@
+.contactSection {
+  background: #F7F8FA;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 58px 0;
+}
+
+.contactBox {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(44, 49, 94, 0.072);
+  padding: 43px 34px;
+  max-width: 480px;
+  width: 100%;
+}
+
+.contactTitle {
+  font-size: 2.05rem;
+  color: #2E315E;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.contactSubtitle {
+  font-size: 1.08rem;
+  color: #A2A8B9;
+  margin-bottom: 24px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.contactForm label {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: #2E315E;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.underlinedInput {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #A2A8B9;
+  padding: 8px 6px 6px;
+  font-size: 1.03rem;
+  font-family: inherit;
+  color: #121321;
+  outline-offset: 2px;
+}
+
+.underlinedInput:focus {
+  border-bottom-color: #3644A6;
+  outline: none;
+}
+
+.underlinedTextarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1.5px solid #A2A8B9;
+  padding: 8px 6px 6px;
+  font-size: 1.03rem;
+  font-family: inherit;
+  color: #121321;
+  resize: vertical;
+  min-height: 48px;
+  max-height: 90px;
+  outline-offset: 2px;
+}
+
+.underlinedTextarea:focus {
+  border-bottom-color: #3644A6;
+  outline: none;
+}
+
+.required {
+  color: #E61D33;
+  font-weight: bold;
+}
+
+.submitButton {
+  margin-top: 4px;
+  background: #232952;
+  color: #fff;
+  font-size: 1.14rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 0;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.16s;
+}
+
+.submitButton:hover {
+  background: #4864E6;
+}
+
+.directEmailBox {
+  margin-top: 22px;
+  background: #F6F8FA;
+  border-radius: 8px;
+  padding: 16px 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.01rem;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #3644A6;
+}
+
+.directEmail {
+  color: #232952;
+  font-weight: 700;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.copyButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.copyIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.copyMessage {
+  color: #4864E6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-left: 8px;
+}
+
+.errorText {
+  color: #E61D33;
+  font-size: 0.9rem;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.inputError {
+  border-bottom-color: #E61D33 !important;
+}
+
+.statusSuccess {
+  color: #2d7a46;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+.statusError {
+  color: #E61D33;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+
+@media (max-width: 600px) {
+  .contactSection {
+    padding: 29px 0 45px 0;
+  }
+  .contactBox {
+    padding: 21px 8px;
+    border-radius: 7px;
+  }
+  .contactTitle {
+    font-size: 1.2rem;
+  }
+}

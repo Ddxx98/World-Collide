@@ -13,8 +13,10 @@ function Hero() {
         </div>
         <div className={styles.heroDescription}>
             <p>We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.</p>
-            <Button className="secondary" size="lg">Donate Now</Button>
+            <div className={styles.heroButtons}>
+              <Button className="secondary" size="lg">Donate Now</Button>
             <Button className="primary" size="lg">Explore Adoption</Button>
+            </div>
         </div>
       </div>
       <div className={styles.heroImage}>

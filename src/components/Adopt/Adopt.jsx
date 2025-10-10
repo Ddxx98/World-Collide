@@ -3,6 +3,7 @@ import styles from "./Adopt.module.css";
 import AdoptImage from "../../assets/images/adopt.png";
 import CustomButton from "../Button/Button";
 import AdoptCarousel from "../AdoptCarousal/AdoptCarousal";
+import ArrowOutward from '../../assets/icons/arrow_outward.svg';
 
 
 function Adopt() {
@@ -19,7 +20,7 @@ function Adopt() {
                     safety, and hope in a child’s life
                 </p>
                 <CustomButton className="primary" size="lg">
-                    Donate Now
+                    Donate Now <img src={ArrowOutward} alt="Arrow Outward" />
                 </CustomButton>
             </div>
 

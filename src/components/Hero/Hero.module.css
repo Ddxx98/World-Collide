@@ -59,6 +59,12 @@
     /* slightly lighter text for description */
 }
 
+.heroButtons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 .heroImage {
     flex: 1;
     display: flex;
