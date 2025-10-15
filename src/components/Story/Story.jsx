@@ -43,33 +43,14 @@ function Story() {
     },
   ]
 
-  const [openIndices, setOpenIndices] = useState(arr.map(() => false))
   const [mobileIndex, setMobileIndex] = useState(0)
-  const [mobileOpen, setMobileOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)
 
-  // ✅ Resize listener to update layout on screen size change
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 600)
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
-
-  const handleToggle = (i) => {
-    setOpenIndices((prev) => prev.map((open, idx) => (idx === i ? !open : open)))
-  }
-
-  const handleMobileToggle = () => setMobileOpen((open) => !open)
-
-  const handleMobilePrev = () => {
-    setMobileOpen(false)
-    setMobileIndex((i) => (i === 0 ? arr.length - 1 : i - 1))
-  }
-
-  const handleMobileNext = () => {
-    setMobileOpen(false)
-    setMobileIndex((i) => (i === arr.length - 1 ? 0 : i + 1))
-  }
 
   return (
     <div className={styles.story}>
@@ -79,8 +60,7 @@ function Story() {
           <p>Read how we started Worlds Collide Ministries</p>
         </div>
       </div>
-
-      <div className={styles.cards}>
+      <div className={isMobile ? styles.cardsMobile : styles.cards}>
         {isMobile ? (
           <>
             <div
@@ -88,54 +68,52 @@ function Story() {
               style={{ backgroundImage: `url(${arr[mobileIndex].image})` }}
             >
               <div className={styles.cardOverlay} />
-              <div
-                className={`${styles.iconContainer} ${
-                  mobileOpen ? styles.iconContainerShifted : ''
-                }`}
-              >
-                <div className={styles.iconCircle}>
-                  <img
-                    src={arr[mobileIndex].icon}
-                    alt=""
-                    className={styles.icon}
-                    aria-hidden="true"
-                  />
+              <div className={styles.cardContent}>
+                <div className={styles.iconRow}>
+                  <div className={styles.iconCircle}>
+                    <img
+                      src={arr[mobileIndex].icon}
+                      alt=""
+                      className={styles.icon}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h2 className={styles.cardTitle}>{arr[mobileIndex].title}</h2>
+                  <span className={styles.arrowWrap}>
+                    <img
+                      src={ArrowUp}
+                      alt="Show details"
+                      className={`${styles.arrow} ${styles.arrowUp}`}
+                    />
+                    <img
+                      src={ArrowDown}
+                      alt="Hide details"
+                      className={`${styles.arrow} ${styles.arrowDown}`}
+                    />
+                  </span>
                 </div>
-                <h2 className={styles.cardTitle}>{arr[mobileIndex].title}</h2>
-                <button
-                  className={styles.arrowButton}
-                  onClick={handleMobileToggle}
-                  aria-label={mobileOpen ? 'Close details' : 'Open details'}
-                >
-                  <img
-                    src={mobileOpen ? ArrowDown : ArrowUp}
-                    alt={mobileOpen ? 'Arrow Down' : 'Arrow Up'}
-                    className={styles.arrow}
-                  />
-                </button>
-              </div>
-              <div
-                className={`${styles.cardDescriptionContainer} ${
-                  mobileOpen ? styles.open : ''
-                }`}
-              >
-                <p className={styles.cardDescription}>
-                  {arr[mobileIndex].description}
-                </p>
+                <div className={styles.cardDescriptionContainer}>
+                  <p className={styles.cardDescription}>
+                    {arr[mobileIndex].description}
+                  </p>
+                </div>
               </div>
             </div>
-
             <div className={styles.bottomNav}>
               <button
                 className={styles.navArrow}
-                onClick={handleMobilePrev}
+                onClick={() =>
+                  setMobileIndex((i) => (i === 0 ? arr.length - 1 : i - 1))
+                }
                 aria-label="Previous story"
               >
                 <img src={ArrowBack} alt="Previous" />
               </button>
               <button
                 className={styles.navArrow}
-                onClick={handleMobileNext}
+                onClick={() =>
+                  setMobileIndex((i) => (i === arr.length - 1 ? 0 : i + 1))
+                }
                 aria-label="Next story"
               >
                 <img src={ArrowForward} alt="Next" />
@@ -150,46 +128,42 @@ function Story() {
               key={idx}
             >
               <div className={styles.cardOverlay} />
-              <div
-                className={`${styles.iconContainer} ${
-                  openIndices[idx] ? styles.iconContainerShifted : ''
-                }`}
-              >
-                <div className={styles.iconCircle}>
-                  <img
-                    src={item.icon}
-                    alt=""
-                    className={styles.icon}
-                    aria-hidden="true"
-                  />
+              <div className={styles.cardContent}>
+                <div className={styles.iconRow}>
+                  <div className={styles.iconCircle}>
+                    <img
+                      src={item.icon}
+                      alt=""
+                      className={styles.icon}
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <h2 className={styles.cardTitle}>{item.title}</h2>
+                  <span className={styles.arrowWrap}>
+                    <img
+                      src={ArrowUp}
+                      alt="Show details"
+                      className={`${styles.arrow} ${styles.arrowUp}`}
+                    />
+                    <img
+                      src={ArrowDown}
+                      alt="Hide details"
+                      className={`${styles.arrow} ${styles.arrowDown}`}
+                    />
+                  </span>
                 </div>
-                <h2 className={styles.cardTitle}>{item.title}</h2>
-                <button
-                  className={styles.arrowButton}
-                  onClick={() => handleToggle(idx)}
-                  aria-label={openIndices[idx] ? 'Close details' : 'Open details'}
-                >
-                  <img
-                    src={openIndices[idx] ? ArrowDown : ArrowUp}
-                    alt={openIndices[idx] ? 'Arrow Down' : 'Arrow Up'}
-                    className={styles.arrow}
-                  />
-                </button>
-              </div>
-              <div
-                className={`${styles.cardDescriptionContainer} ${
-                  openIndices[idx] ? styles.open : ''
-                }`}
-              >
-                <p className={styles.cardDescription}>{item.description}</p>
+                <div className={styles.cardDescriptionContainer}>
+                  <p className={styles.cardDescription}>{item.description}</p>
+                </div>
               </div>
             </div>
           ))
         )}
       </div>
-
       <div className={styles.footer}>
-        <p className={styles.description}>Hover over images to read the brief on each image.</p>
+        <p className={styles.description}>
+          Hover or tap the cards to read the brief on each image.
+        </p>
         <p>
           Know more <NavLink to="/about">about us</NavLink> here.
         </p>

@@ -1,4 +1,5 @@
 .story {
+  padding-top: 2rem;
   width: 100%;
   background: #faf9f6;
   /* padding: 2vw 0 5vw 0; */
@@ -7,19 +8,24 @@
   align-items: center;
 }
 
+.titleContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2vw;
+}
+
 .title {
   font-size: 3rem;
   font-weight: 700;
   color: #2e315e;
   margin-bottom: 2vw;
-  text-align: center;
 }
 
 .subtitle p {
   font-size: 1.2rem;
   color: #2e315e;
   opacity: 0.85;
-  text-align: center;
   margin-bottom: 2.5vw;
 }
 
@@ -31,6 +37,13 @@
   width: 100%;
   /* max-width: 1200px; */
   position: relative;
+}
+.cardsMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  gap: 0;
 }
 
 .card {
@@ -45,16 +58,17 @@
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
   transition: box-shadow 0.3s, transform 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
-
-.card:hover {
+.card:hover,
+.card:active,
+.card:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 14px 34px rgba(46, 49, 94, 0.18);
 }
-
 .cardOverlay {
   position: absolute;
   inset: 0;
@@ -62,29 +76,34 @@
   pointer-events: none;
 }
 
-/* ---------- ICON/DETAILS CONTAINERS: DESKTOP ---------- */
-.iconContainer {
-  position: absolute;
-  left: 0;
-  right: 0;
+.cardContent {
   width: 100%;
-  z-index: 3;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- One unified row for icon/title/arrows --- */
+.iconRow {
+  width: 100%;
   display: flex;
   align-items: center;
   flex-direction: row;
   padding: 1rem 1.2rem;
   background: #f5f5f5d6;
   border-radius: 0 0 18px 18px;
-  bottom: 0;
-  transition: border-radius 0.35s, background 0.3s, box-shadow 0.3s, bottom 0.25s;
+  transition: border-radius 0.3s, background 0.3s, box-shadow 0.3s;
+  position: relative;
+  z-index: 3;
 }
 
-/* Pin the iconContainer directly above .cardDescriptionContainer.open (no transform) */
-.iconContainerShifted {
-  bottom: 220px; 
+.iconRow,
+.card:hover .iconRow,
+.card:focus-within .iconRow,
+.card:active .iconRow {
+  /* When description is visible, round top corners */
   border-radius: 18px 18px 0 0;
-  background: #f5f5f5d6;
-  transition: border-radius 0.35s, background 0.3s, box-shadow 0.3s, bottom 0.25s;
 }
 
 .iconCircle {
@@ -111,41 +130,66 @@
   margin-left: 0.4rem;
 }
 
-.arrowButton {
-  background: none;
-  border: none;
+.arrowWrap {
   margin-left: auto;
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 38px;
 }
 
 .arrow {
   width: 28px;
   height: 28px;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.07));
-  transition: transform 0.3s;
+  transition: opacity 0.22s;
+  /* position: absolute; */
+  right: 0;
+  top: 2px;
+  opacity: 1;
+  pointer-events: none;
+}
+.arrowDown {
+  opacity: 0;
+}
+.arrowUp {
+  opacity: 1;
+}
+.card:hover .arrowUp,
+.card:focus-within .arrowUp,
+.card:active .arrowUp,
+.cardsMobile .card:active .arrowUp {
+  opacity: 0;
+}
+.card:hover .arrowDown,
+.card:focus-within .arrowDown,
+.card:active .arrowDown,
+.cardsMobile .card:active .arrowDown {
+  opacity: 1;
 }
 
-/* Description container is always at the bottom */
+/* --- Description is inside cardContent, always after iconRow --- */
 .cardDescriptionContainer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  background: #f5f5f5d6;
   width: 100%;
-  padding: 1rem 1rem 1.3rem 1rem;
+  background: #f5f5f5d6;
   border-radius: 0 0 18px 18px;
+  padding: 0;
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.35s cubic-bezier(0.82, 0.09, 0.3, 0.91), opacity 0.25s ease;
+  will-change: max-height, opacity, padding;
+  transition: max-height 0.4s cubic-bezier(0.82, 0.09, 0.3, 0.91),
+    opacity 0.28s,
+    padding 0.18s;
 }
-
-/* When open, description shows up and iconContainerShifted sits flush above it */
-.cardDescriptionContainer.open {
+/* Show description on hover, active or focus (all devices) */
+.card:hover .cardDescriptionContainer,
+.card:focus-within .cardDescriptionContainer,
+.card:active .cardDescriptionContainer,
+.cardsMobile .card:active .cardDescriptionContainer {
   max-height: 220px;
   opacity: 1;
+  padding: 1.2rem 1.2rem 1.5rem 1.2rem;
 }
 
 .cardDescription {
@@ -158,6 +202,50 @@
   transition: opacity 0.3s ease 0.1s;
 }
 
+.bottomNav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14vw 1.2rem 14vw;
+  margin-top: 0.6rem;
+}
+
+.navArrow {
+  background: #f5f5f5ee;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(46, 49, 94, 0.13);
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: background 0.14s;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    display: none; /* Only show mobile cardsMobile container */
+  }
+  .cardsMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  .card {
+    width: 92vw;
+    max-width: 98vw;
+    min-width: 82vw;
+    height: 430px;
+    box-shadow: 0 10px 18px rgba(46, 49, 94, 0.13);
+  }
+  .arrow {
+    width: 34px;
+    height: 34px;
+    right: 10px;
+    top: 8px;
+  }
+}
 .footer {
   width: 100%;
   max-width: 1200px;
@@ -167,71 +255,11 @@
   display: flex;
   justify-content: space-between;
 }
-.description{
-  color: #898BA9;
+.description {
+  color: #898ba9;
 }
 .footer a {
   color: #2e315e;
   font-weight: 600;
   text-decoration: underline;
-}
-
-/* -------------- MOBILE -------------- */
-@media (max-width: 500px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-    max-width: 100vw;
-  }
-  .card {
-    width: 92vw;
-    max-width: 98vw;
-    min-width: 82vw;
-    height: 430px;
-    box-shadow: 0 10px 18px rgba(46, 49, 94, 0.13);
-  }
-  .iconContainer {
-    /* position: relative !important; */
-    bottom: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    transform: translateY(0) !important;
-    border-radius: 18px 18px 0 0;
-  }
-  .iconContainerShifted {
-    bottom: 0 !important;
-    transform: translateY(0) !important;
-    position: relative !important;
-  }
-  .cardDescriptionContainer {
-    position: relative;
-    border-radius: 0 0 18px 18px;
-  }
-  .arrow {
-    width: 34px;
-    height: 34px;
-  }
-  .bottomNav {
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 14vw 1.2rem 14vw;
-    margin-top: 0.6rem;
-  }
-  .navArrow {
-    background: #f5f5f5ee;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 1px 4px rgba(46, 49, 94, 0.13);
-    padding: 0.8rem;
-    cursor: pointer;
-    transition: background 0.14s;
-    display: flex;
-    align-items: center;
-  }
-  .footer {
-    flex-direction: column;
-    gap: 0.6rem;
-    padding: 0 1rem;
-  }
 }
