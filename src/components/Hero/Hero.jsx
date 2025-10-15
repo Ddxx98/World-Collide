@@ -9,7 +9,7 @@ function Hero() {
       <div className={styles.heroContent}>
         <p>2 World Collide</p>
         <div className={styles.heroText}>
-            <p>Care <span>today</span>, permanent homes tomorrow. Help us make it <span>possible</span>.</p>
+            <p>Care <span>today,</span> permanent homes tomorrow. Help us make it <span>possible.</span></p>
         </div>
         <div className={styles.heroDescription}>
             <p>We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.</p>

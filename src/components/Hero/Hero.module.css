@@ -39,9 +39,7 @@
 }
 
 .heroText p span {
-    color: #2e315e;
-    /* highlight color */
-    background: #A6A9C9;
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 .heroContent > div p {

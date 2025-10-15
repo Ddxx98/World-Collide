@@ -60,7 +60,7 @@ const Footer = () => {
       </div>
 
       <div className={styles.column}>
-        <h4 className={styles.heading}>Socials</h4>
+        <div><h4 className={styles.heading}>Socials</h4></div>
         <div className={styles.socialLinks}>
           <a href="https://facebook.com" className={styles.socialIconLink} target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <img src={facebook} alt="Facebook" className={styles.socialIcon} />
