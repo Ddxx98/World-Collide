@@ -78,7 +78,7 @@ function Story() {
                       aria-hidden="true"
                     />
                   </div>
-                  <h2 className={styles.cardTitle}>{arr[mobileIndex].title}</h2>
+                  <p className={styles.cardTitle}>{arr[mobileIndex].title}</p>
                   <span className={styles.arrowWrap}>
                     <img
                       src={ArrowUp}
@@ -138,7 +138,7 @@ function Story() {
                       aria-hidden="true"
                     />
                   </div>
-                  <h2 className={styles.cardTitle}>{item.title}</h2>
+                  <p className={styles.cardTitle}>{item.title}</p>
                   <span className={styles.arrowWrap}>
                     <img
                       src={ArrowUp}

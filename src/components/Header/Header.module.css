@@ -54,7 +54,6 @@
 .navLink {
     text-decoration: none;
     color: #2e315e;
-    font-weight: 600;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
@@ -62,6 +61,7 @@
 .navLink:hover {
     color: #2e315e;
     text-decoration: underline;
+    font-weight: 600;
 }
 
 .active {

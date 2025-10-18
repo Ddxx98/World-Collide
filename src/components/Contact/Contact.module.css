@@ -8,15 +8,13 @@
 
 .contactBox {
   background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(44, 49, 94, 0.072);
   padding: 43px 34px;
-  max-width: 480px;
+  max-width: 640px;
   width: 100%;
 }
 
 .contactTitle {
-  font-size: 2.05rem;
+  font-size: 3rem;
   color: #2E315E;
   font-weight: 800;
   margin-bottom: 8px;
@@ -24,7 +22,7 @@
 
 .contactSubtitle {
   font-size: 1.08rem;
-  color: #A2A8B9;
+  color: #898BA9;
   margin-bottom: 24px;
 }
 
@@ -36,8 +34,8 @@
 
 .contactForm label {
   font-size: 1.02rem;
-  font-weight: 600;
-  color: #2E315E;
+  font-weight: 400;
+  color: #4D517F;
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -47,11 +45,16 @@
   background: transparent;
   border: none;
   border-bottom: 1.5px solid #A2A8B9;
-  padding: 8px 6px 6px;
+  padding: 8px 0px 6px;
   font-size: 1.03rem;
   font-family: inherit;
-  color: #121321;
+  color: #2E315E;
+  font-weight: 500;
   outline-offset: 2px;
+}
+
+.underlinedInput::placeholder {
+  color: #898BA9;
 }
 
 .underlinedInput:focus {
@@ -63,18 +66,23 @@
   background: transparent;
   border: none;
   border-bottom: 1.5px solid #A2A8B9;
-  padding: 8px 6px 6px;
+  padding: 8px 0px 6px;
   font-size: 1.03rem;
   font-family: inherit;
-  color: #121321;
+  color: #2E315E;
+  font-weight: 500;
   resize: vertical;
   min-height: 48px;
   max-height: 90px;
   outline-offset: 2px;
 }
 
+.underlinedTextarea::placeholder {
+  color: #898BA9;
+}
+
 .underlinedTextarea:focus {
-  border-bottom-color: #3644A6;
+  border-bottom-color: #2E315E;
   outline: none;
 }
 
@@ -112,12 +120,13 @@
   font-size: 1.01rem;
   gap: 10px;
   flex-wrap: wrap;
-  color: #3644A6;
+  color: #898BA9;
+  border: 1px solid #DCDCE5;
 }
 
 .directEmail {
-  color: #232952;
-  font-weight: 700;
+  color: #4D517F;
+  font-weight: 500;
   text-decoration: underline;
   white-space: nowrap;
 }

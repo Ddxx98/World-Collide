@@ -1,15 +1,15 @@
 .page {
   min-height: 90vh;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
 }
 
 .heading {
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 50px;
-  color: #2E315E; /* Updated to match your palette dark shade */
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #2E315E;
+  padding:2rem;
+  letter-spacing: 2px;
 }
 
 .circlesContainer {
@@ -17,7 +17,8 @@
   flex-direction: column;
   align-items: center;
   gap: 60px;
-  background-color: #D6F1E7; /* Softer greenish shade for background */
+  background-color: #D6F1E7;
+  /* Softer greenish shade for background */
   width: 100%;
 }
 
@@ -29,25 +30,33 @@
 }
 
 .bottomRow {
-  margin-top: -40px; /* shifts bottom row upward slightly for overlap effect */
+  margin-top: -40px;
+  /* shifts bottom row upward slightly for overlap effect */
 }
 
 /* ---- Circle styling ---- */
 .circle {
-  background-color: #F0F4FF; /* Light blue shade to harmonize with palette */
-  border: 2px solid #5568B2; /* Deeper blue border for emphasis */
+  background-color: #F0F4FF;
+  /* Light blue shade to harmonize with palette */
+  border: 2px solid #5568B2;
+  /* Deeper blue border for emphasis */
   border-radius: 50%;
-  width: 300px; /* increased size */
-  height: 300px; /* increased size */
+  width: 300px;
+  /* increased size */
+  height: 300px;
+  /* increased size */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px;
   text-align: center;
-  color: #2E315E; /* dark blue text */
-  font-size: 1.1rem; /* larger font */
+  color: #2E315E;
+  /* dark blue text */
+  font-size: 1.1rem;
+  /* larger font */
   line-height: 1.5;
-  box-shadow: 0 6px 14px rgba(46, 49, 94, 0.15); /* subtle navy shadow */
+  box-shadow: 0 6px 14px rgba(46, 49, 94, 0.15);
+  /* subtle navy shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -86,6 +95,7 @@
     grid-row: 1;
     justify-self: end;
   }
+
   .circle:nth-child(2) {
     grid-column: 3 / span 2;
     grid-row: 1;
@@ -105,6 +115,7 @@
     grid-row: 3;
     justify-self: end;
   }
+
   .circle:nth-child(5) {
     grid-column: 3 / span 2;
     grid-row: 3;

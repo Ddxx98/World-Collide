@@ -23,13 +23,11 @@
     display: flex;
     justify-content: center;
     width: 100vw;
-    gap: 2vw;
+    gap: 4vw;
 }
 
 .circlesRowTop {
     margin-top: -60px;
-    /* trim top of top circles */
-    margin-bottom: 6vw;
 }
 
 .circlesRowBottom {

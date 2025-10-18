@@ -2,6 +2,7 @@
     background: #fff;
     min-height: 100vh;
     padding-top: 70px;
+    color: #4D517F;
 }
 
 .aboutTitleWrap {
@@ -80,25 +81,21 @@
     display: flex;
     flex-direction: column;
     gap: 34px;
-    /* position: relative; */
 }
 
 .timelineSection {
     display: flex;
     align-items: flex-start;
-    /* position: relative; */
     min-height: 110px;
     margin-left: 20px;
 }
 
 .timelineIconWrap {
-    /* position: relative; */
     width: 54px;
     min-width: 54px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
 }
 
 .timelineIcon {
@@ -113,8 +110,6 @@
     box-shadow: 0 2px 7px rgba(44, 49, 94, 0.09);
     font-size: 1.9rem;
     margin-bottom: 0;
-    /* position: relative; */
-    z-index: 2;
 }
 .timelineIcon img{
     fill: #2E315E;
@@ -127,8 +122,8 @@
     width: 0;
     height: calc(100% - 41px);
     border-left: 2.5px dotted #B9BCC2;
-    z-index: 1;
-    transform: translateX(-50%);
+    z-index: 2;
+    /* transform: translateX(-50%); */
 }
 
 .timelineHeading {
@@ -156,7 +151,7 @@
 
 .timelineContent p,
 .timelineContent ul {
-    color: #484c64;
+    color: #4D517F;
     font-size: 1.02rem;
     margin-bottom: 8px;
 }

@@ -70,7 +70,7 @@ const Footer = () => {
 
       {/* === Column 2: Socials === */}
       <div className={styles.socialSection}>
-        <h4 className={styles.title}>Socials</h4>
+        <h4 className={styles.title}>Our Socials</h4>
         <div className={styles.socialList}>
           <a
             href="https://facebook.com"

@@ -6,7 +6,11 @@
 /* 2. Remove default margin */
 * {
   margin: 0;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif, 'DM Serif Display', serif;
+}
+
+h1, h2, h3 {
+  font-family: 'DM Serif Display', serif;
 }
 
 /* 3. Enable keyword animations */

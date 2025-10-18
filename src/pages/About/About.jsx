@@ -9,7 +9,7 @@ import Altitude from "../../assets/icons/about/altitude.svg";
 import Strategy from "../../assets/icons/about/strategy.svg";
 import Important from "../../assets/icons/about/label_important.svg";
 
-const imageSlots = [1, 2, 3, 4, 5]; // Replace with your actual <img src=... />
+const imageSlots = [1, 2, 3, 4, 5,6]; // Replace with your actual <img src=... />
 
 const timelineSections = [
   {
@@ -146,9 +146,9 @@ function About() {
                 <div className={styles.timelineSection} key={i}>
                   <div className={styles.timelineIconWrap}>
                     <span className={styles.timelineIcon}>{sec.icon}</span>
-                    {i < timelineSections.length - 1 && (
+                    {/* {i < timelineSections.length - 1 && (
                       <span className={styles.timelineLine}></span>
-                    )}
+                    )} */}
                   </div>
                   <div className={styles.timelineContent}>
                     <div className={styles.timelineHeading}>{sec.heading}</div>

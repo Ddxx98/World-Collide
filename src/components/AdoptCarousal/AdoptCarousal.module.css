@@ -1,5 +1,4 @@
 .carousel {
-  position: relative;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
