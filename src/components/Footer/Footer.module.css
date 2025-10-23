@@ -22,7 +22,7 @@
 
 /* ====== Column 1: Navigation Section ====== */
 .navSection {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
@@ -31,14 +31,14 @@
 
 .navGroups {
   display: flex;
-  max-width: 400px;
+  justify-content: space-between;
+  /* max-width: 400px; */
+  gap: 2rem;
 }
 
 .navBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  max-width: 200px;
 }
 
 .title {

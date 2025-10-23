@@ -1,137 +1,167 @@
-.circlesBg {
-    width: 100vw;
-    background: #e6fcf2;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.bg {
+  /* width: 100vw;
+  min-height: 100vh; */
+  background: #e6fcf2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
-.circlesContainer {
-    width: 100vw;
-    max-width: 1350px;
-    margin: 0 auto;
-    overflow: hidden;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* --------- DESKTOP --------- */
+.desktopContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 38px;
+  padding-bottom: 38px;
 }
 
-.circlesRow {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    gap: 4vw;
-}
-
-.circlesRowTop {
-    margin-top: -60px;
-}
-
-.circlesRowBottom {
-    margin-bottom: -60px;
-    /* trim bottom of bottom circles */
+.row {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3vw;
 }
 
 .circle {
-    width: 320px;
-    height: 320px;
-    background: #fff;
-    border: 2.6px solid #7182aa;
-    border-radius: 50%;
-    box-shadow: 0 6px 24px rgba(46, 49, 94, 0.06);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    margin: 0 1vw;
-    /* To keep vertical centering after trim */
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.text {
-    max-width: 80%;
-    display: block;
-    text-align: center;
-    color: #444a7a;
-    font-size: 1.2rem;
-    line-height: 1.38;
-    font-weight: 500;
+  width: 340px;
+  height: 340px;
+  min-width: 180px;
+  min-height: 180px;
+  background: #fff;
+  border: 2.5px solid #7182aa;
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(46, 49, 94, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 30px 16px;
+  position: relative;
+  margin: 0 14px;
 }
 
 .trimTop {
-    margin-top: -64px;
-    /* clip the top edge */
+  margin-top: -76px;
 }
 
 .trimBottom {
-    margin-bottom: -64px;
-    /* clip the bottom edge */
+  margin-bottom: -76px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-    .circle {
-        width: 220px;
-        height: 220px;
-        font-size: 1rem;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    .circlesRowTop,
-    .circlesRowBottom {
-        margin-top: -34px;
-        margin-bottom: -34px;
-    }
-
-    .trimTop,
-    .trimBottom {
-        margin-top: -34px;
-        margin-bottom: -34px;
-    }
+.text {
+  max-width: 83%;
+  color: #444a7a;
+  font-size: 1.08rem;
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  display: block;
 }
 
-@media (max-width: 900px) {
-    .circle {
-        width: 160px;
-        height: 160px;
-        font-size: 0.94rem;
-        padding-top: 9px;
-        padding-bottom: 9px;
-    }
+/* --------- MOBILE (diamond) --------- */
+.mobileDiamond {
+  display: none;
 }
 
 @media (max-width: 700px) {
-    .circlesRow {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        margin: 0;
-        width: 100vw;
-    }
+  .desktopContainer {
+    display: none !important;
+  }
+  .mobileDiamond {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    /* min-height: 100vh; */
+    background: #e6fcf2;
+    padding: 0;
+  }
+  .mobileRow {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .mobileCenterRow {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle {
+    width: 65vw;
+    height: 65vw;
+    /* min-width: 112px;
+    min-height: 112px;
+    max-width: 325px;
+    max-height: 325px; */
+    border: 1.7px solid #4d517f;
+    padding: 12px;
+    box-shadow: 0 6px 19px 2px rgba(80, 81, 94, 0.10);
+    margin: 0;
+  }
+  .centerCircle {
+    width: 65vw;
+    height: 65vw;
+    /* min-width: 128px;
+    min-height: 128px;
+    max-width: 360px;
+    max-height: 360px; */
+    border: 1.7px solid #4d517f;
+    padding: 5px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 19px 2px rgba(80, 81, 94, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative;
+    overflow: hidden;
+    z-index: 2; */
+  }
+  .trimTop {
+    margin-top: -6vw;
+  }
+  .trimBottom {
+    margin-bottom: -6vw;
+  }
+  .text {
+    font-size: 0.91rem;
+    width: 89%;
+    line-height: 1.22;
+  }
+}
 
-    .circle {
-        width: 90vw;
-        height: 90vw;
-        max-width: 300px;
-        min-width: 128px;
-        padding: 10vw 0;
-        margin: 0;
-    }
-
-    .trimTop,
-    .trimBottom {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .circlesContainer {
-        padding-top: 13px;
-        padding-bottom: 13px;
-    }
+@media (max-width: 430px) {
+  .circle {
+    width: 30vw;
+    height: 30vw;
+    /* min-width: 78px;
+    min-height: 78px;
+    max-width: 99vw;
+    max-height: 99vw; */
+    padding: 5px;
+  }
+  .centerCircle {
+    width: 43vw;
+    height: 43vw;
+    /* min-width: 88px;
+    min-height: 88px;
+    max-width: 99vw;
+    max-height: 99vw; */
+    padding: 5px;
+  }
+  .text {
+    font-size: 0.785rem;
+    width: 99%;
+    line-height: 1.18;
+  }
 }

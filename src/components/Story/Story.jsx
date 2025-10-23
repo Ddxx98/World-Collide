@@ -23,21 +23,21 @@ function Story() {
     {
       title: 'Words Colliding',
       description:
-        'We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.',
+        'When we met four year old Roxanne for the first time, we were shocked to see the unimaginable abuse she had faced. That weekend felt like two worlds colliding, our lives changed forever.',
       image: Image1,
       icon: Icon2,
     },
     {
       title: 'Becoming Family',
       description:
-        'We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.',
+        'Three months later, we became the parents of Roxanne and her younger brother, Christopher. That collision of worlds didn’t destroy us; it created something beautiful, a family.',
       image: Image1,
       icon: Icon3,
     },
     {
       title: 'The Birth of the Org',
       description:
-        'We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.',
+        'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
       image: Image1,
       icon: Icon4,
     },
