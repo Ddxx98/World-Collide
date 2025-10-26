@@ -9,7 +9,14 @@ import Altitude from "../../assets/icons/about/altitude.svg";
 import Strategy from "../../assets/icons/about/strategy.svg";
 import Important from "../../assets/icons/about/label_important.svg";
 
-const imageSlots = [1, 2, 3, 4, 5,6]; // Replace with your actual <img src=... />
+import Image1 from "../../assets/images/About/pic1.jpg";
+import Image2 from "../../assets/images/About/pic2.jpg";
+import Image3 from "../../assets/images/About/pic3.jpg";
+import Image4 from "../../assets/images/About/pic4.jpg";
+import Image5 from "../../assets/images/About/pic5.jpg";
+import Image6 from "../../assets/images/About/pic6.jpg";
+
+const imageSlots = [Image1, Image2, Image3, Image4, Image5, Image6]; // Replace with your actual <img src=... />
 
 const timelineSections = [
   {
@@ -134,7 +141,7 @@ function About() {
                   {/* Replace with <img src="..." alt="..." /> as required */}
                   <div className={styles.imagePlaceholder}>
                     
-                    <img src="https://via.placeholder.com/150" alt="Placeholder" /> 
+                    <img src={idx} alt="Placeholder" className={styles.image} /> 
                   </div>
                 </div>
               ))}
@@ -165,11 +172,7 @@ function About() {
             {imageSlots.map((idx) => (
               <div className={styles.imgBox} key={idx}>
                 <div className={styles.imagePlaceholder}>
-                  <svg viewBox="0 0 48 48" width="48" height="48">
-                    <rect x="0" y="0" width="48" height="48" rx="8" fill="#EDF0F3"/>
-                    <path d="M16 30l8-11 6 8L37 20" stroke="#B9BCC2" strokeWidth="2" fill="none"/>
-                    <circle cx="20" cy="20" r="4" fill="#B9BCC2"/>
-                  </svg>
+                  <img src={idx} alt="Placeholder" className={styles.mobileImage} />
                 </div>
               </div>
             ))}

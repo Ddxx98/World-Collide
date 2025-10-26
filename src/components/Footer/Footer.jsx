@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Footer.module.css";
 
@@ -7,9 +7,12 @@ import instagram from "../../assets/icons/instagram.svg";
 import youtube from "../../assets/icons/youtube.svg";
 
 const Footer = () => {
+  const [copyMessage, setCopyMessage] = useState('');
+
   const handleCopy = () => {
     navigator.clipboard.writeText(window.location.href);
-    alert("Website link copied to clipboard!");
+    setCopyMessage('Copied to clipboard!');
+    setTimeout(() => setCopyMessage(''), 2000);
   };
 
   return (
@@ -63,6 +66,7 @@ const Footer = () => {
           >
             Click here to copy website link
           </button>
+          <span className={styles.copyMessage}>{copyMessage}</span>
         </div>
       </div>
 
@@ -73,7 +77,7 @@ const Footer = () => {
         <h4 className={styles.title}>Our Socials</h4>
         <div className={styles.socialList}>
           <a
-            href="https://facebook.com"
+            href="https://www.facebook.com/2worldscollide/"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialItem}
@@ -82,7 +86,7 @@ const Footer = () => {
             <img src={facebook} alt="Facebook" className={styles.icon} />
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/worldscollideministries/collideministries"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialItem}
@@ -91,7 +95,7 @@ const Footer = () => {
             <img src={instagram} alt="Instagram" className={styles.icon} />
           </a>
           <a
-            href="https://youtube.com"
+            href="https://www.youtube.com/@WorldsCollideMinistries"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.socialItem}
@@ -106,11 +110,10 @@ const Footer = () => {
 
       {/* === Column 3: CTA === */}
       <div className={styles.ctaSection}>
-        <h4 className={styles.title}>Join the Cause</h4>
-        <p className={styles.text}>
-          Together, we can bring light, love, and hope into the lives of
-          children in need. Every step counts.
-        </p>
+        {/* <h4 className={styles.title}>Join the Cause</h4> */}
+        <p className={styles.ctaPara}>
+          Powered By </p> <a className={styles.ctaLink} href="https://www.interserver.net/" target="_blank" rel="noopener noreferrer">Interserver</a>
+        
       </div>
     </footer>
   );

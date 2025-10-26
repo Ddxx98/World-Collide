@@ -5,13 +5,16 @@ import ArrowOutward from "../../assets/icons/arrow_outward.svg";
 
 const faqs = [
     "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
-    "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
-    "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
-    "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
-    "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
+    "Damarys and Jason still need to attend a week long training for the Royal Family Kids Camp, we are looking help from you to accommodate their training",
+    "We are looking for a host church for one of oir upcoming event.",
+    "We are also looking for a location for our permanent camp.",
 ];
 
 function Help() {
+    const clickHandle = () => {
+        window.location.href = "https://www.paypal.com/donate/?hosted_button_id=8QY99CLBWJ2R2";
+    }
+
     return (
         <div className={styles.helpBg}>
             <div className={styles.helpContent}>
@@ -25,7 +28,7 @@ function Help() {
                 ))}
                 <div className={styles.helpBox + " " + styles.lastBox}>
                     <div className={styles.helpButton}>
-                        <CustomButton className="primary" size="lg">Donate Now <img src={ArrowOutward} alt="Arrow Outward" /></CustomButton>
+                        <CustomButton onClick={clickHandle} className="primary" size="lg">Donate Now <img src={ArrowOutward} alt="Arrow Outward" /></CustomButton>
                     </div>
                     <div className={styles.helpAction}>
                         <a className={styles.helpContact} href="/contact">Contact Us</a>

@@ -5,11 +5,11 @@
     justify-content: space-between;
     gap: 3rem;
     margin: 0 auto;
-    padding: 2rem 3rem;
+    padding: 2vw;
     box-sizing: border-box;
     background: #05073A;
     color: #fff;
-    min-height: 80vh;
+    /* min-height: 50vh; */
 }
 
 /* ===== Content Panel ===== */
@@ -17,14 +17,15 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     /* vertical centering */
-    gap: 1.5rem;
+    /* gap: 1rem; */
     background: #2E315E;
     padding: 2rem;
     border-radius: 16px;
     box-sizing: border-box;
-    min-height: 400px;
+    width: 50%;
+    /* min-height: 400px; */
     /* same height as image */
 }
 
@@ -35,15 +36,15 @@
 }
 
 .heroText p {
-    font-size: clamp(4rem, 4vw, 3rem);
-    font-weight: 900;
+    font-size: 60px;
+    font-weight: 600;
     line-height: 1.2;
     margin: 0;
 }
 
 .heroText p span {
     background-color: rgba(255, 255, 255, 0.12);
-    padding: 0 0.25rem;
+    /* padding: 0 0.25rem; */
     border-radius: 4px;
 }
 
@@ -51,7 +52,7 @@
     color: #A6A9C9;
     font-size: 1rem;
     line-height: 1.6;
-    margin: 0 0 1.75rem;
+    margin: 0 0 1rem;
 }
 
 /* ===== Buttons ===== */
@@ -64,7 +65,6 @@
 
 .heroButtons button {
     min-width: 140px;
-    transition: transform 0.3s ease;
 }
 
 .heroButtons button:hover {
@@ -79,13 +79,15 @@
     align-items: center;
     border-radius: 16px;
     box-sizing: border-box;
-    min-height: 400px;
+    width: 50%;
+    height: 100vh;
+    /* min-height: 400px; */
 }
 
 .heroImage .image {
     width: 100%;
     height: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 10px 25px rgb(46 49 94 / 0.15);
@@ -104,6 +106,7 @@
     .heroImage {
         width: 100%;
         min-height: auto;
+        gap: 1rem;
         /* let them resize naturally */
     }
 

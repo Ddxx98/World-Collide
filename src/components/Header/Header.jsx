@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
 import CustomButton from "../Button/Button";
+import Logo from "../../assets/icons/logo.svg";
 
 import MenuIcon from "../../assets/icons/menu.svg";
 import CloseIcon from "../../assets/icons/close.svg";
@@ -15,7 +16,7 @@ function Header() {
     <div className={styles.header}>
       <div className={styles.headerToolbar}>
         <div className={styles.header__logo}>
-          <img src="/logo.png" alt="World Collide Logo" className={styles.logoImage} />
+          <img src={Logo} alt="World Collide Logo" className={styles.logoImage} />
         </div>
 
         <button
@@ -61,7 +62,7 @@ function Header() {
               Join Us
             </NavLink>
             <NavLink
-              to="/contact"
+              to="/services/#contact"
               className={({ isActive }) =>
                 isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
               }
@@ -76,7 +77,7 @@ function Header() {
             <CustomButton
               className="primary"
               size="lg"
-              onClick={() => alert("Donate Clicked!")}
+              onClick={() => window.location.href = "https://www.paypal.com/donate/?hosted_button_id=8QY99CLBWJ2R2"}
               type="button"
             >
               Donate

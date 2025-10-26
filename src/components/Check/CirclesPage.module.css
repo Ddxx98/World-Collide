@@ -1,7 +1,7 @@
 .bg {
   /* width: 100vw;
   min-height: 100vh; */
-  background: #e6fcf2;
+  background: #E8FEF1;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding-top: 38px;
   padding-bottom: 38px;
 }
@@ -29,14 +29,14 @@
 }
 
 .circle {
-  width: 340px;
-  height: 340px;
+  width: 290px;
+  height: 290px;
   min-width: 180px;
   min-height: 180px;
   background: #fff;
-  border: 2.5px solid #7182aa;
+  border: 1px solid #4D517F;
   border-radius: 50%;
-  box-shadow: 0 6px 24px rgba(46, 49, 94, 0.06);
+  box-shadow: 0px 1px 12px 1px #00000014;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,22 +47,23 @@
 }
 
 .trimTop {
-  margin-top: -76px;
+  margin-top: -90px;
 }
 
 .trimBottom {
-  margin-bottom: -76px;
+  margin-bottom: -90px;
 }
 
 .text {
   max-width: 83%;
-  color: #444a7a;
+  color: #4D517F;
   font-size: 1.08rem;
   font-family: 'DM Sans', Arial, sans-serif;
   font-weight: 500;
   text-align: center;
   line-height: 1.4;
-  display: block;
+  /* display: flex;
+  align-items: flex-start; */
 }
 
 /* --------- MOBILE (diamond) --------- */
@@ -80,7 +81,7 @@
     align-items: center;
     width: 100vw;
     /* min-height: 100vh; */
-    background: #e6fcf2;
+    background: #E8FEF1;
     padding: 0;
   }
   .mobileRow {
@@ -103,9 +104,9 @@
     min-height: 112px;
     max-width: 325px;
     max-height: 325px; */
-    border: 1.7px solid #4d517f;
+    border: 1px solid #4D517F;
     padding: 12px;
-    box-shadow: 0 6px 19px 2px rgba(80, 81, 94, 0.10);
+    box-shadow: 0px 1px 12px 1px #00000014;
     margin: 0;
   }
   .centerCircle {
@@ -115,11 +116,11 @@
     min-height: 128px;
     max-width: 360px;
     max-height: 360px; */
-    border: 1.7px solid #4d517f;
+    border: 1px solid #4D517F;
     padding: 5px;
     background: #fff;
     border-radius: 50%;
-    box-shadow: 0 6px 19px 2px rgba(80, 81, 94, 0.12);
+    box-shadow: 0px 1px 12px 1px #00000014;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,10 +129,10 @@
     z-index: 2; */
   }
   .trimTop {
-    margin-top: -6vw;
+    margin-top: -8vw;
   }
   .trimBottom {
-    margin-bottom: -6vw;
+    margin-bottom: -8vw;
   }
   .text {
     font-size: 0.91rem;

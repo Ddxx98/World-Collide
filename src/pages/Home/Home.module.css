@@ -2,13 +2,13 @@
   background-color: #FBF6EE;
   display: flex;
   flex-direction: column; /* vertically stack paragraphs */
-  padding: 2rem;
+  padding: 2vw;
   box-sizing: border-box;
 }
 
 .content p {
   color: #D8A85A;
-  font-size: 5rem;
+  font-size: 120px;
   font-weight: 900;
   font-family: 'DM Serif Display', serif !important; 
 }
@@ -16,6 +16,7 @@
 .content p span {
   color: #F1E0C5;
   font-family: 'DM Serif Display', serif !important; 
+  font-style: italic;
 }
 
 /* Responsive for mobile devices */
@@ -27,12 +28,12 @@
   }
 
   .content p {
-    font-size: 1.5rem;   /* smaller font for mobile */
+    font-size: 32px;   /* smaller font for mobile */
   }
   
   .content p span {
     /* keep same or slightly smaller */
-    font-size: 1.5rem; /* inherits from p if needed */
+    font-size: 32px; /* inherits from p if needed */
   }
 }
 
@@ -41,7 +42,7 @@
   padding: 2.5rem 2rem;
   box-sizing: border-box;
   text-align: center;
-  box-shadow: 0 6px 22px rgba(46,49,94,0.09);
+  box-shadow: 0px 0px 8px 2px #00000014 inset;
   display: flex;
   flex-direction: column;
   align-items: center;

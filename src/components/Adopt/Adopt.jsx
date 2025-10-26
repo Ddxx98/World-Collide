@@ -19,7 +19,7 @@ function Adopt() {
                     even your spare change, even a single cent, can add up to love,
                     safety, and hope in a child’s life
                 </p>
-                <CustomButton className="primary" size="lg">
+                <CustomButton onClick={() => window.location.href = "https://www.paypal.com/donate/?hosted_button_id=8QY99CLBWJ2R2"} className="primary" size="lg">
                     Donate Now <img src={ArrowOutward} alt="Arrow Outward" />
                 </CustomButton>
             </div>
@@ -37,7 +37,7 @@ function Adopt() {
                     alt="Adoption support"
                     className={styles.infoImage}
                 />
-                <CustomButton className="secondary" size="lg" style={{ backgroundColor: "#E8FEF1" }}>
+                <CustomButton onClick={() => window.location.href = "https://adoptflorida.org/"} className="secondary" size="lg" style={{ backgroundColor: "#E8FEF1" }}>
                     Explore Adoption
                 </CustomButton>
             </div>

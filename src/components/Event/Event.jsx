@@ -56,7 +56,7 @@ function Event() {
         <section className={styles.section}>
             <h1 className={styles.heading}>Events</h1>
             <div className={styles.eventList}>
-                {events.map((event, idx) => (
+                {events.length === 0 ? <p className={styles.noEvents}>No events to display, whenever there is an event that will display here</p> : events.map((event, idx) => (
                     <div className={styles.eventCard} key={idx}>
                         <div className={styles.eventCardLeft}>
                             <div className={styles.eventImageBox}>
@@ -85,18 +85,22 @@ function Event() {
                                 <div className={styles.eventLinkBox}>
                                     {event.type === "Online" && event.link && (
                                         <>
-                                            <span className={styles.eventLinkLabel}>Click here&nbsp;</span>
+                                            {/* <span className={styles.eventLinkLabel}>Click here&nbsp;</span>
                                             <a href={event.link} target="_blank" rel="noopener noreferrer" className={styles.eventLink}>
                                                 to copy the link
-                                            </a>
+                                            </a> */}
+                                            <a href={event.link} target="_blank" rel="noopener noreferrer" className={styles.eventLink}>Click here</a>
+                                            <span className={styles.eventLinkLabel}> to copy the link</span>
                                         </>
                                     )}
                                     {event.type === "Offline" && event.address && (
                                         <>
-                                            <span className={styles.eventLinkLabel}>Click here&nbsp;</span>
+                                            {/* <span className={styles.eventLinkLabel}>Click here&nbsp;</span>
                                             <a href={`https://maps.google.com/?q=${encodeURIComponent(event.address)}`} target="_blank" rel="noopener noreferrer" className={styles.eventLink}>
                                                 to copy the address
-                                            </a>
+                                            </a> */}
+                                            <a href={`https://maps.google.com/?q=${encodeURIComponent(event.address)}`} target="_blank" rel="noopener noreferrer" className={styles.eventLink}>Click here</a>
+                                            <span className={styles.eventLinkLabel}> to copy the address</span>
                                         </>
                                     )}
                                 </div>

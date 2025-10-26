@@ -12,7 +12,7 @@
     align-items: center;
     padding: 1rem 2rem;
     height: 64px;
-    position: relative;
+    /* position: relative; */
     justify-content: space-between;
 }
 
@@ -60,13 +60,13 @@
 
 .navLink:hover {
     color: #2e315e;
+    font-weight: 500;
     text-decoration: underline;
-    font-weight: 600;
 }
 
 .active {
     color: #2e315e;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: underline;
 }
 

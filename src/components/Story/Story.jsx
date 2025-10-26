@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import styles from './Story.module.css'
 import Icon1 from '../../assets/icons/live_help.svg'
-import Image1 from '../../assets/images/image2.jpg'
+import Image1 from '../../assets/images/Story/pic1.jpg'
+import Image2 from '../../assets/images/Story/pic2.jpg'
+import Image3 from '../../assets/images/Story/pic3.jpg'
+import Image4 from '../..//assets/images/Story/pic4.jpg'
 import Icon2 from '../../assets/icons/join.svg'
 import Icon3 from '../../assets/icons/family_group.svg'
 import Icon4 from '../../assets/icons/volunteer_activism.svg'
@@ -24,21 +27,21 @@ function Story() {
       title: 'Words Colliding',
       description:
         'When we met four year old Roxanne for the first time, we were shocked to see the unimaginable abuse she had faced. That weekend felt like two worlds colliding, our lives changed forever.',
-      image: Image1,
+      image: Image2,
       icon: Icon2,
     },
     {
       title: 'Becoming Family',
       description:
         'Three months later, we became the parents of Roxanne and her younger brother, Christopher. That collision of worlds didn’t destroy us; it created something beautiful, a family.',
-      image: Image1,
+      image: Image3,
       icon: Icon3,
     },
     {
       title: 'The Birth of the Org',
       description:
         'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
-      image: Image1,
+      image: Image4,
       icon: Icon4,
     },
   ]
