@@ -19,7 +19,7 @@ function Home() {
         <p>Join us <span>join change</span></p>
         <p>Lift us <span>lift hope</span></p>
       </div>
-      <Story />
+      {/* <Story /> */}
       <div className={styles.quoteBox}>
         <div>
           <p className={styles.quoteText}>

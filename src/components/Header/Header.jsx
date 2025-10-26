@@ -16,7 +16,9 @@ function Header() {
     <div className={styles.header}>
       <div className={styles.headerToolbar}>
         <div className={styles.header__logo}>
+          <NavLink exact to="/">
           <img src={Logo} alt="World Collide Logo" className={styles.logoImage} />
+          </NavLink>
         </div>
 
         <button
