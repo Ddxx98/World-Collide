@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { NavHashLink } from 'react-router-hash-link';
 import styles from "./Header.module.css";
 import CustomButton from "../Button/Button";
 import Logo from "../../assets/icons/logo.svg";
@@ -17,7 +18,7 @@ function Header() {
       <div className={styles.headerToolbar}>
         <div className={styles.header__logo}>
           <NavLink exact to="/">
-          <img src={Logo} alt="World Collide Logo" className={styles.logoImage} />
+            <img src={Logo} alt="World Collide Logo" className={styles.logoImage} />
           </NavLink>
         </div>
 
@@ -63,7 +64,7 @@ function Header() {
             >
               Join Us
             </NavLink>
-            <NavLink
+            <NavHashLink
               to="/services/#contact"
               className={({ isActive }) =>
                 isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
@@ -71,7 +72,7 @@ function Header() {
               onClick={() => setNavOpen(false)}
             >
               Contact Us
-            </NavLink>
+            </NavHashLink>
           </div>
 
           {/* Donate button inside nav, bottom alignment on mobile */}

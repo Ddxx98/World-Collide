@@ -90,6 +90,12 @@
 }
 
 @media (max-width: 950px) {
+    .joinSection {
+        padding: 0.5rem;
+    }
+    .joinHeader{
+        padding: 0;
+    }
     .joinMainCard {
         width: 99vw;
         max-width: 99vw;
@@ -101,10 +107,6 @@
         flex-direction: column;
         width: 99vw;
         border-radius: 13px !important;
-    }
-
-    .joinHeader {
-        padding: 0 2vw;
     }
 
     .joinImageBox,
@@ -127,6 +129,10 @@
     }
 
     .joinContent {
-        padding: 18px 7vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem !important;
     }
 }

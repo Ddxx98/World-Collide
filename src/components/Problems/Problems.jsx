@@ -61,7 +61,7 @@ function Problems() {
       </div>
       <div className={styles.bottom}>
         <p>
-          If you are interested in reading more the <NavLink className={styles.link} to="/about">Christian Alliance for Orphan's</NavLink> is an amazing resource 
+          If you are interested in reading more the <NavLink className={styles.link} to="https://cafo.org/" target="_blank">Christian Alliance for Orphan's</NavLink> is an amazing resource 
         </p>
       </div>
     </div>

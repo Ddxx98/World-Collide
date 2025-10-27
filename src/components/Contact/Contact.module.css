@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 58px 0;
+  padding: 2rem;
 }
 
 .contactBox {
@@ -179,13 +179,13 @@
 
 @media (max-width: 600px) {
   .contactSection {
-    padding: 29px 0 45px 0;
+    padding: 0;
   }
   .contactBox {
-    padding: 21px 8px;
+    padding: 0.5rem;
     border-radius: 7px;
   }
   .contactTitle {
-    font-size: 1.2rem;
+    font-size: 2rem;
   }
 }

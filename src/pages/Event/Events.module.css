@@ -1,13 +1,9 @@
 .wrapper {
     width: 100%;
     background: #F7F8FA;
-    min-height: 100vh;
-    padding-bottom: 44px;
 }
 
 
 @media (max-width: 600px) {
-    .wrapper {
-        padding-bottom: 16vw;
-    }
+    
 }

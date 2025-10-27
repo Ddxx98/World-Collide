@@ -2,7 +2,7 @@
   background-color: #FBF6EE;
   display: flex;
   flex-direction: column; /* vertically stack paragraphs */
-  padding: 2vw;
+  padding: 2rem;
   box-sizing: border-box;
 }
 
