@@ -34,10 +34,10 @@
 
 @media (max-width: 768px) {
   .carouselItem {
-    width: 250px;
+    width: 200px;
     height: 320px;
   }
   .carousel {
-    gap: 10px;
+    gap: 7px;
   }
 }

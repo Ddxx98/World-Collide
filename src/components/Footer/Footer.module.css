@@ -99,7 +99,7 @@
 /* ====== Column 2: Social Section ====== */
 .socialSection {
   flex: 1;
-  min-width: 250px;
+  width: 100%;
   display: flex;
   gap: 1rem;
   position: relative;
@@ -147,7 +147,7 @@
 /* ====== Column 3: CTA Section ====== */
 .ctaSection {
   flex: 1;
-  min-width: 250px;
+  min-width: 100%;
   display: flex;
   gap: 0.7rem;
 }

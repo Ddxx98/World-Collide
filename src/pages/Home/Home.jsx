@@ -19,11 +19,11 @@ function Home() {
         <p>Join us <span>join change</span></p>
         <p>Lift us <span>lift hope</span></p>
       </div>
-      {/* <Story /> */}
+      <Story />
       <div className={styles.quoteBox}>
         <div>
           <p className={styles.quoteText}>
-            Children are the<span className={styles.highlight}>hands</span>by which we<span className={styles.highlight}>take hold</span>of heaven
+            Children are the hands by which we take hold of heaven
           </p>
           <div className={styles.poet}>
             — Henry Ward Beecher
@@ -36,7 +36,7 @@ function Home() {
       <div className={styles.quoteBox}>
         <div>
           <p className={styles.quoteText}>
-            Not<span className={styles.highlight}>all of us can do great</span>things. But we can do<span className={styles.highlight}>small things</span>with<span className={styles.highlight}>great love.</span>
+            Not all of us can do great things. But we can do small things with great love.
           </p>
           <div className={styles.poet}>
             - Mother Theresa
