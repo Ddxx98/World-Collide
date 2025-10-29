@@ -58,18 +58,18 @@
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
-/* .card:hover,
+.card:hover,
 .card:active,
 .card:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 14px 34px rgba(46, 49, 94, 0.18);
-} */
-/* .cardOverlay {
+  /* box-shadow: 0 14px 34px rgba(46, 49, 94, 0.18); */
+} 
+.cardOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(50, 50, 80, 0.2) 50%, rgba(50, 50, 80, 0.88) 100%);
+  /* background: linear-gradient(180deg, rgba(50, 50, 80, 0.2) 50%, rgba(50, 50, 80, 0.88) 100%); */
   pointer-events: none;
-} */
+}
 
 .cardContent {
   width: 100%;
@@ -199,7 +199,7 @@
 }
 
 .bottomNav {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -245,10 +245,10 @@
     flex-direction: column; 
   }
   .cardsMobile {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
   }
   .card {
     width: 92vw;

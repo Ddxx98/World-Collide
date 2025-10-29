@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Help.module.css";
 import CustomButton from "../Button/Button";
 import ArrowOutward from "../../assets/icons/arrow_outward.svg";
+import { NavHashLink } from 'react-router-hash-link';
 
 const faqs = [
     "We are currently raising funds to purchase the camp where we will serve Orange and Seminole County.  We also want to open the camp up to any Royal Family Kids camp in the nation that wants to use our camp.",
@@ -31,7 +32,7 @@ function Help() {
                         <CustomButton onClick={clickHandle} className="primary" size="lg">Donate Now <img src={ArrowOutward} alt="Arrow Outward" /></CustomButton>
                     </div>
                     <div className={styles.helpAction}>
-                        <a className={styles.helpContact} href="/contact">Contact Us</a>
+                        <NavHashLink className={styles.helpContact} to="/services#contact">Contact Us</NavHashLink>
                     </div>
                 </div>
             </div>

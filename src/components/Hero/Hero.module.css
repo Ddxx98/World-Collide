@@ -63,9 +63,9 @@
     gap: 1rem;
 }
 
-.heroButtons button {
+/* .heroButtons button {
     min-width: 140px;
-}
+} */
 
 .heroButtons button:hover {
     transform: translateY(-2px);

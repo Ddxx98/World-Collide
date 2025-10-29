@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Footer.module.css";
+import { NavHashLink } from "react-router-hash-link";
 
 import facebook from "../../assets/icons/facebook.svg";
 import instagram from "../../assets/icons/instagram.svg";
@@ -21,29 +22,29 @@ const Footer = () => {
       <div className={styles.navSection}>
         <div className={styles.navGroups}>
           <div className={styles.navBlock}>
-            <h4 className={styles.navBlocktitle}>Involve Yourself</h4>
-            <NavLink to="/volunteer" className={styles.link}>
+            <h4 className={styles.navBlockTitle}>Involve Yourself</h4>
+            <NavLink to="https://www.paypal.com/donate/?hosted_button_id=8QY99CLBWJ2R2" className={styles.link}>
               Donate
             </NavLink>
-            <NavLink to="/donate" className={styles.link}>
+            <NavLink to="/services" className={styles.link}>
               Events
             </NavLink>
-            <NavLink to="/events" className={styles.link}>
+            <NavHashLink to="/services#contact" className={styles.link}>
               Contact
-            </NavLink>
+            </NavHashLink>
           </div>
 
           <div className={styles.navBlock}>
-            <h4 className={styles.navBlocktitle}>Content</h4>
-            <NavLink to="/blog" className={styles.link}>
+            <h4 className={styles.navBlockTitle}>Content</h4>
+            <NavLink to="/about" className={styles.link}>
               About Us
             </NavLink>
-            <NavLink to="/resources" className={styles.link}>
+            {/* <NavLink to="/resources" className={styles.link}>
               First Initiative
             </NavLink>
             <NavLink to="/news" className={styles.link}>
               Vision
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
 

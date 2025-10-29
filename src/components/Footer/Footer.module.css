@@ -32,8 +32,8 @@
 .navGroups {
   display: flex;
   justify-content: space-between;
-  /* max-width: 400px; */
   gap: 2.5rem;
+  max-width: 400px;
 }
 
 .navBlock {
@@ -47,7 +47,7 @@
   color: var(--footer-subtext);
 }
 
-.navBlocktitle{
+.navBlockTitle{
   font-weight: 600;
   font-size: 1.2rem;
   color: var(--footer-text);
@@ -195,12 +195,7 @@
     padding: 0;
   }
 
-  .navGroups {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .navBlocktitle{
+  .navBlockTitle{
     margin-bottom: 0.5rem;
   }
 }

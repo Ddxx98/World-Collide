@@ -11,7 +11,7 @@
 
 /* --------- DESKTOP --------- */
 .desktopContainer {
-  width: 100vw;
+  /* width: 100vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,20 +79,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    /* width: 100vw; */
     /* min-height: 100vh; */
     background: #E8FEF1;
     padding: 0;
   }
   .mobileRow {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
   }
   .mobileCenterRow {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     justify-content: center;
     align-items: center;
