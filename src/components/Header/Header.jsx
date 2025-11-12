@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 import { NavHashLink } from 'react-router-hash-link';
 import styles from "./Header.module.css";
 import CustomButton from "../Button/Button";
-import Logo from "../../assets/icons/logo.svg";
 
+import Logo from "../../assets/icons/logo.svg";
 import MenuIcon from "../../assets/icons/menu.svg";
 import CloseIcon from "../../assets/icons/close.svg";
 
@@ -57,6 +57,7 @@ function Header() {
             </NavLink>
             <NavLink
               to="/services"
+              end
               className={({ isActive }) =>
                 isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
               }

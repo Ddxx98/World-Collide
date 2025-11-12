@@ -48,7 +48,7 @@ function Contact() {
     };
 
     const handleCopyEmail = () => {
-        navigator.clipboard.writeText('emailaddress@email.com')
+        navigator.clipboard.writeText('jason@2worldscollide.org')
             .then(() => {
                 setCopyMessage('Copied!');
                 setTimeout(() => setCopyMessage(''), 2000);
@@ -116,7 +116,7 @@ function Contact() {
 
                 <div className={styles.directEmailBox}>
                     <span>Or you can also directly email us here at&nbsp;</span>
-                    <a href="mailto:emailaddress@email.com" className={styles.directEmail}>emailaddress@email.com</a>
+                    <a href="mailto:jason@2worldscollide.org" className={styles.directEmail}>jason@2worldscollide.org</a>
                     <button type="button" className={styles.copyButton} onClick={handleCopyEmail} aria-label="Copy email">
                         <img src={Copy} alt="Copy Icon" className={styles.copyIcon} />
                     </button>

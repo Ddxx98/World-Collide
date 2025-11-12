@@ -48,6 +48,11 @@ function Story() {
 
   const [mobileIndex, setMobileIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)
+  const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+
+  const toggleDescription = () => {
+    setIsDescriptionOpen(prev => !prev);
+  };
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 600)
@@ -69,6 +74,7 @@ function Story() {
             <div
               className={styles.card}
               style={{ backgroundImage: `url(${arr[mobileIndex].image})` }}
+              onClick={toggleDescription}
             >
               <div className={styles.cardOverlay} />
               <div className={styles.cardContent}>
@@ -83,19 +89,22 @@ function Story() {
                   </div>
                   <p className={styles.cardTitle}>{arr[mobileIndex].title}</p>
                   <span className={styles.arrowWrap}>
-                    <img
-                      src={ArrowUp}
-                      alt="Show details"
-                      className={`${styles.arrow} ${styles.arrowUp}`}
-                    />
-                    <img
-                      src={ArrowDown}
-                      alt="Hide details"
-                      className={`${styles.arrow} ${styles.arrowDown}`}
-                    />
+                    {isDescriptionOpen ? (
+                      <img
+                        src={ArrowDown}
+                        alt="Hide details"
+                        className={`${styles.arrow} ${styles.arrowDown} ${styles.visible}`}
+                      />
+                    ) : (
+                      <img
+                        src={ArrowUp}
+                        alt="Show details"
+                        className={`${styles.arrow} ${styles.arrowUp} ${styles.visible}`}
+                      />
+                    )}
                   </span>
                 </div>
-                <div className={styles.cardDescriptionContainer}>
+                <div className={isDescriptionOpen ? styles.cardDescriptionContainer : styles.cardDescriptionContainerHidden}>
                   <p className={styles.cardDescription}>
                     {arr[mobileIndex].description}
                   </p>
@@ -105,8 +114,10 @@ function Story() {
             <div className={styles.bottomNav}>
               <button
                 className={styles.navArrow}
-                onClick={() =>
+                onClick={() => {
                   setMobileIndex((i) => (i === 0 ? arr.length - 1 : i - 1))
+                  setIsDescriptionOpen(false)
+                }
                 }
                 aria-label="Previous story"
               >
@@ -114,8 +125,10 @@ function Story() {
               </button>
               <button
                 className={styles.navArrow}
-                onClick={() =>
+                onClick={() => {
                   setMobileIndex((i) => (i === arr.length - 1 ? 0 : i + 1))
+                  setIsDescriptionOpen(false)
+                }
                 }
                 aria-label="Next story"
               >

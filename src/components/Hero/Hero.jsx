@@ -14,8 +14,8 @@ function Hero() {
         <div className={styles.heroDescription}>
             <p>We walk alongside foster children and their families with support and mentorship, stand up for their rights, and help every child have the chance for a safe, loving, and permanent home.</p>
             <div className={styles.heroButtons}>
-              <Button className="secondary" size="lg">Donate Now</Button>
-              <Button className="primary" size="lg">Explore Adoption</Button>
+              <Button className="secondary" onClick={() => window.location.href = "https://www.paypal.com/donate/?hosted_button_id=8QY99CLBWJ2R2"} size="lg">Donate Now</Button>
+              <Button className="primary" onClick={() => window.location.href = "https://adoptflorida.org/"} size="lg">Explore Adoption</Button>
             </div>
         </div>
       </div>

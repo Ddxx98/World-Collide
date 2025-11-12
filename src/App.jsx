@@ -1,5 +1,5 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home/Home'
 import About from './pages/About/About'
@@ -12,6 +12,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Events />} />
+      
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
 }

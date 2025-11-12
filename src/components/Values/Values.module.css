@@ -5,68 +5,14 @@
   padding-top: 1rem;
 }
 
-.header{
+.header {
   padding: 2rem;
 }
 
 .heading {
-  font-size: 2.6rem;
-  font-weight: 800;
+  font-size: 3rem;
+  font-weight: 700;
   color: #2E315E;
-  letter-spacing: 2px;
-}
-
-.circlesContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  background-color: #D6F1E7;
-  /* Softer greenish shade for background */
-  width: 100%;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
-}
-
-.bottomRow {
-  margin-top: -40px;
-  /* shifts bottom row upward slightly for overlap effect */
-}
-
-/* ---- Circle styling ---- */
-.circle {
-  background-color: #F0F4FF;
-  /* Light blue shade to harmonize with palette */
-  border: 2px solid #5568B2;
-  /* Deeper blue border for emphasis */
-  border-radius: 50%;
-  width: 300px;
-  /* increased size */
-  height: 300px;
-  /* increased size */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 30px;
-  text-align: center;
-  color: #2E315E;
-  /* dark blue text */
-  font-size: 1.1rem;
-  /* larger font */
-  line-height: 1.5;
-  box-shadow: 0 6px 14px rgba(46, 49, 94, 0.15);
-  /* subtle navy shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.circle:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(46, 49, 94, 0.25);
 }
 
 /* ---- Responsive Design ---- */
@@ -88,6 +34,10 @@
 }
 
 @media (max-width: 768px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
   .circlesContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

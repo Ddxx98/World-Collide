@@ -6,36 +6,36 @@ import Schedule from '../../assets/icons/events/schedule.svg'
 import Groups from '../../assets/icons/events/groups.svg'
 
 const events = [
-    {
-        type: "Online",
-        date: "16, march 2025",
-        start: "01:30 PM",
-        end: "02:30 PM",
-        title: "let's discuss how can we make students summer holidays better",
-        link: "https://meet.google.com/event-link",
-        address: "",
-        img: "",
-    },
-    {
-        type: "Offline",
-        date: "16, march 2025",
-        start: "01:30 PM",
-        end: "02:30 PM",
-        title: "let's discuss how can we make students summer holidays better",
-        link: "",
-        address: "123 Main St, Springfield",
-        img: "",
-    },
-    {
-        type: "Offline",
-        date: "16, march 2025",
-        start: "01:30 PM",
-        end: "02:30 PM",
-        title: "let's discuss how can we make students summer holidays better",
-        link: "",
-        address: "456 College Ave, Metro City",
-        img: "",
-    },
+    // {
+    //     type: "Online",
+    //     date: "16, march 2025",
+    //     start: "01:30 PM",
+    //     end: "02:30 PM",
+    //     title: "let's discuss how can we make students summer holidays better",
+    //     link: "https://meet.google.com/event-link",
+    //     address: "",
+    //     img: "",
+    // },
+    // {
+    //     type: "Offline",
+    //     date: "16, march 2025",
+    //     start: "01:30 PM",
+    //     end: "02:30 PM",
+    //     title: "let's discuss how can we make students summer holidays better",
+    //     link: "",
+    //     address: "123 Main St, Springfield",
+    //     img: "",
+    // },
+    // {
+    //     type: "Offline",
+    //     date: "16, march 2025",
+    //     start: "01:30 PM",
+    //     end: "02:30 PM",
+    //     title: "let's discuss how can we make students summer holidays better",
+    //     link: "",
+    //     address: "456 College Ave, Metro City",
+    //     img: "",
+    // },
 ];
 
 const iconOnline = (

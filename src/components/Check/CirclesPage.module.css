@@ -44,6 +44,12 @@
   padding: 30px 16px;
   position: relative;
   margin: 0 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(46, 49, 94, 0.25);
 }
 
 .trimTop {

@@ -23,7 +23,7 @@
 @media (max-width: 480px) {
   .content {
     height: auto;       /* allow height to grow */
-    padding: 1.5rem;   /* a bit less padding */
+    padding: 1rem;   /* a bit less padding */
     gap: 1.2rem;       /* tighter spacing */
   }
 

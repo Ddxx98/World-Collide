@@ -35,7 +35,7 @@
 @media (max-width: 1200px) {
   .carouselItem {
     width: 260px;
-    height: 320px;
+    height: 360px;
   }
   .carousel {
     gap: 7px;

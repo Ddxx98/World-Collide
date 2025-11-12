@@ -16,7 +16,7 @@
 .contactTitle {
   font-size: 3rem;
   color: #2E315E;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 8px;
 }
 
@@ -179,13 +179,12 @@
 
 @media (max-width: 600px) {
   .contactSection {
-    padding: 0;
+    padding: 1rem;
   }
   .contactBox {
     padding: 0.5rem;
-    border-radius: 7px;
   }
   .contactTitle {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }

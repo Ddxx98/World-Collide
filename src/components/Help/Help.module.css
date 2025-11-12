@@ -48,7 +48,7 @@
 
 .heading {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #2E315E;
   margin: 0 0 8px 0;
 }
@@ -70,6 +70,9 @@
 }
 
 @media (max-width: 900px) {
+  .helpBg{
+    padding: 0.2rem;
+  }
   .helpContent {
     max-width: 98vw;
     padding: 0 6px;
@@ -80,7 +83,7 @@
     padding: 20px 12px;
   }
   .heading {
-    font-size: 1.8rem; /* Increased for bigger heading on tablet */
+    font-size: 2.5rem; 
   }
 }
 
@@ -88,14 +91,13 @@
   .helpContent {
     max-width: 100vw;
     gap: 8px;
-    padding: 0 2px;
   }
   .helpBox {
     padding: 13px 4px;
   }
   .heading {
-    font-size: 2.2rem; /* Bigger heading on mobile */
-    font-weight: 800;
+    font-size: 2.5rem; /* Bigger heading on mobile */
+    font-weight: 700;
   }
   .helpBox p {
     font-size: 0.93rem;
