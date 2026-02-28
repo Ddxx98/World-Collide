@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px var(--space-lg);
   box-sizing: border-box;
 }
 
@@ -60,8 +60,8 @@
   border-radius: 12px;
 }
 
-.infoSection button:hover{
-    color: #4D517F;
+.infoSection button:hover {
+  color: #4D517F;
 }
 
 .subHeading {
@@ -91,6 +91,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

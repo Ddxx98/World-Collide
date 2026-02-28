@@ -1,0 +1,95 @@
+.loginPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-primary);
+    padding: var(--space-lg);
+}
+
+.loginCard {
+    background-color: var(--color-bg-light);
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.loginCard h1 {
+    font-family: var(--font-display);
+    color: var(--color-secondary);
+    font-size: 2.5rem;
+    margin-bottom: var(--space-xs);
+}
+
+.loginCard p {
+    color: var(--color-text-body);
+    margin-bottom: var(--space-lg);
+}
+
+.error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: var(--space-sm);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-md);
+    font-size: 0.9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: left;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.inputGroup label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+.inputGroup input {
+    padding: var(--space-sm);
+    border: 2px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color var(--transition-fast);
+}
+
+.inputGroup input:focus {
+    outline: none;
+    border-color: var(--color-secondary);
+}
+
+.loginButton {
+    background-color: var(--color-secondary);
+    color: var(--color-text-main);
+    padding: var(--space-sm);
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: transform var(--transition-fast), background-color var(--transition-fast);
+    margin-top: var(--space-sm);
+}
+
+.loginButton:hover {
+    background-color: #40447E;
+    transform: translateY(-2px);
+}
+
+.loginButton:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}

@@ -13,52 +13,65 @@ import ArrowDown from '../../assets/icons/keyboard_arrow_down.svg'
 import ArrowBack from '../../assets/icons/arrow_back.svg'
 import ArrowForward from '../../assets/icons/arrow_forward.svg'
 import { NavLink } from 'react-router-dom'
+import { contentService } from '../../firebase/contentService'
+
+const staticStories = [
+  {
+    id: 'static-1',
+    title: 'The Question',
+    description: 'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
+    image: Image1,
+    icon: Icon1,
+  },
+  {
+    id: 'static-2',
+    title: 'Words Colliding',
+    description: 'When we met four year old Roxanne for the first time, we were shocked to see the unimaginable abuse she had faced. That weekend felt like two worlds colliding, our lives changed forever.',
+    image: Image2,
+    icon: Icon2,
+  },
+  {
+    id: 'static-3',
+    title: 'Becoming Family',
+    description: "Three months later, we became the parents of Roxanne and her younger brother, Christopher. That collision of worlds didn't destroy us; it created something beautiful, a family.",
+    image: Image3,
+    icon: Icon3,
+  },
+  {
+    id: 'static-4',
+    title: 'The Birth of the Org',
+    description: 'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
+    image: Image4,
+    icon: Icon4,
+  },
+]
 
 function Story() {
-  const arr = [
-    {
-      title: 'The Question',
-      description:
-        'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
-      image: Image1,
-      icon: Icon1,
-    },
-    {
-      title: 'Words Colliding',
-      description:
-        'When we met four year old Roxanne for the first time, we were shocked to see the unimaginable abuse she had faced. That weekend felt like two worlds colliding, our lives changed forever.',
-      image: Image2,
-      icon: Icon2,
-    },
-    {
-      title: 'Becoming Family',
-      description:
-        'Three months later, we became the parents of Roxanne and her younger brother, Christopher. That collision of worlds didn’t destroy us; it created something beautiful, a family.',
-      image: Image3,
-      icon: Icon3,
-    },
-    {
-      title: 'The Birth of the Org',
-      description:
-        'This is why we founded Worlds Collide Ministries: to give children hope, support, and the chance for new beginnings. Every child we serve deserves the opportunity to experience care, love, and safety, even when the path is difficult.',
-      image: Image4,
-      icon: Icon4,
-    },
-  ]
-
+  const [stories, setStories] = useState(staticStories)
   const [mobileIndex, setMobileIndex] = useState(0)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)
   const [isDescriptionOpen, setIsDescriptionOpen] = useState(false);
+
+  useEffect(() => {
+    const unsubscribe = contentService.subscribe('stories', (data) => {
+      if (data.length > 0) setStories(data)
+    })
+
+    const handleResize = () => setIsMobile(window.innerWidth <= 600)
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      unsubscribe()
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
 
   const toggleDescription = () => {
     setIsDescriptionOpen(prev => !prev);
   };
 
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 600)
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  // Use live Firebase data if available, otherwise fall back to static stories
+  const displayStories = stories.length > 0 ? stories : staticStories
 
   return (
     <div className={styles.story}>
@@ -73,21 +86,23 @@ function Story() {
           <>
             <div
               className={styles.card}
-              style={{ backgroundImage: `url(${arr[mobileIndex].image})` }}
+              style={{ backgroundImage: `url(${stories[mobileIndex].image})` }}
               onClick={toggleDescription}
             >
               <div className={styles.cardOverlay} />
               <div className={styles.cardContent}>
                 <div className={styles.iconRow}>
                   <div className={styles.iconCircle}>
-                    <img
-                      src={arr[mobileIndex].icon}
-                      alt=""
-                      className={styles.icon}
-                      aria-hidden="true"
-                    />
+                    {stories[mobileIndex].icon && (
+                      <img
+                        src={stories[mobileIndex].icon}
+                        alt=""
+                        className={styles.icon}
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
-                  <p className={styles.cardTitle}>{arr[mobileIndex].title}</p>
+                  <p className={styles.cardTitle}>{stories[mobileIndex].title}</p>
                   <span className={styles.arrowWrap}>
                     {isDescriptionOpen ? (
                       <img
@@ -106,7 +121,7 @@ function Story() {
                 </div>
                 <div className={isDescriptionOpen ? styles.cardDescriptionContainer : styles.cardDescriptionContainerHidden}>
                   <p className={styles.cardDescription}>
-                    {arr[mobileIndex].description}
+                    {stories[mobileIndex].description}
                   </p>
                 </div>
               </div>
@@ -115,7 +130,7 @@ function Story() {
               <button
                 className={styles.navArrow}
                 onClick={() => {
-                  setMobileIndex((i) => (i === 0 ? arr.length - 1 : i - 1))
+                  setMobileIndex((i) => (i === 0 ? stories.length - 1 : i - 1))
                   setIsDescriptionOpen(false)
                 }
                 }
@@ -126,7 +141,7 @@ function Story() {
               <button
                 className={styles.navArrow}
                 onClick={() => {
-                  setMobileIndex((i) => (i === arr.length - 1 ? 0 : i + 1))
+                  setMobileIndex((i) => (i === stories.length - 1 ? 0 : i + 1))
                   setIsDescriptionOpen(false)
                 }
                 }
@@ -137,22 +152,24 @@ function Story() {
             </div>
           </>
         ) : (
-          arr.map((item, idx) => (
+          stories.map((item, idx) => (
             <div
               className={styles.card}
               style={{ backgroundImage: `url(${item.image})` }}
-              key={idx}
+              key={item.id || idx}
             >
               <div className={styles.cardOverlay} />
               <div className={styles.cardContent}>
                 <div className={styles.iconRow}>
                   <div className={styles.iconCircle}>
-                    <img
-                      src={item.icon}
-                      alt=""
-                      className={styles.icon}
-                      aria-hidden="true"
-                    />
+                    {item.icon && (
+                      <img
+                        src={item.icon}
+                        alt=""
+                        className={styles.icon}
+                        aria-hidden="true"
+                      />
+                    )}
                   </div>
                   <p className={styles.cardTitle}>{item.title}</p>
                   <span className={styles.arrowWrap}>

@@ -1,0 +1,269 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    color: var(--color-secondary);
+}
+
+.header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--space-md) 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--space-lg);
+}
+
+.headerContent h1 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.userSection {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.logoutBtn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 6px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.logoutBtn:hover {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.main {
+    max-width: 1200px;
+    margin: var(--space-xl) auto;
+    display: flex;
+    gap: var(--space-xl);
+    padding: 0 var(--space-lg);
+}
+
+.sidebar {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.sidebar button {
+    text-align: left;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    background: white;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--color-secondary);
+    transition: all var(--transition-fast);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar button:hover {
+    background-color: #f1f5f9;
+}
+
+.sidebar button.activeTab {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.formContainer {
+    background: white;
+    padding: var(--space-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer h2 {
+    font-family: var(--font-display);
+    margin-bottom: var(--space-lg);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputRow {
+    display: flex;
+    gap: 1rem;
+}
+
+.inputRow .inputGroup {
+    flex: 1;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.inputGroup input,
+.inputGroup textarea,
+.inputGroup select {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.badge {
+    background: var(--color-accent);
+    color: #2e315e;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.metaText {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.inputGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.buttonGroup {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-sm);
+}
+
+.submitBtn {
+    background-color: var(--color-secondary);
+    color: white;
+    padding: var(--space-sm) var(--space-xl);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cancelBtn {
+    background-color: #e2e8f0;
+    color: var(--color-secondary);
+    padding: var(--space-sm) var(--space-xl);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImage {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.cardInfo {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.cardInfo h3 {
+    margin: 0 0 var(--space-xs);
+}
+
+.cardInfo p {
+    font-size: 0.9rem;
+    color: var(--color-text-body);
+    flex: 1;
+}
+
+.cardActions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.editBtn {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    border: none;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.deleteBtn {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: none;
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+}
